@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
+    <script src="sandbox.js"></script>
+</head>
+
+<body>
+    <div>
+        <h1 class="text-center">Daftar Buku Gramedia</h1>
+        <br>
+        <!-- <button class="btn btn-primary" type="submit">Tambah Buku</button>
+        <h1> </h1> -->
+        <h4 class="clearfix cye-lm-tag">
+            <span class="float-left cye-lm-tag">List data buku</span>
+            <!-- <button class="float-right btn btn-info cye-lm-tag" type="button" data-toggle="modal" data-target="#modal-add" onclick="addBooks()">Tambah
+            Buku</button> -->
+
+            <!-- Tombol  -->
+            <br>
+            <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#modalForm">
+                Tambah Buku
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="modalForm" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                                <span class="sr-only">Tutup</span>
+                            </button>
+                            <h4 class="modal-title" id="labelModalKu">Input Buku</h4>
+                        </div>
+                        <!-- Modal Body -->
+                        <div class="modal-body">
+                            <p class="statusMsg"></p>
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="id">ID</label>
+                                    <input type="text" class="form-control" id="id" placeholder="Masukkan id" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Nama Buku</label>
+                                    <input type="text" class="form-control" id="name"
+                                        placeholder="Masukkan nama buku" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="type_books_id">Type Buku (int 1-5)</label>
+                                    <input type="text" class="form-control" id="type_books_id"
+                                        placeholder="Masukkan Jenis Buku"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Modal Footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary submitBtn" onclick="addBooks()">KIRIM</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </h4>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nama Buku</th>
+                <th>Jenis Buku</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="data-books">
+
+        </tbody>
+    </table>
+    <script src="sandbox.js"></script>
+</body>
+
+</html>
